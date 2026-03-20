@@ -8,8 +8,8 @@ url = 'https://docs.google.com/spreadsheets/d/1UyhCy0dHzduhWemsv7Mc2OzeRAPQGM3Za
 st.title('Romaneios')
 df = pd.read_csv(url)
 
-df.columns = ['codigo', 'hub', 'transportadora', 'qnt', 'data', 'drive', 'observacao', 'coluna1']
-df = df.drop(columns=['coluna1'])
+df.columns = ['codigo', 'hub', 'transportadora', 'qnt', 'data', 'drive', 'observacao', 'coluna1', 'pendencia']
+df = df.drop(columns=['coluna1', 'pendencia'])
 
 df['data'] = pd.to_datetime(df['data'] + "/2026", format='%d/%m/%Y')
 # df['data_formatada'] = df['data'].dt.strftime("%d/%m/%Y")
